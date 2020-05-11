@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ data.title }}{% endblock %}
+
+
+{% block html_head %}
+    <style>
+        section{width:100%; float:left;}
+        .banner-section{background-image:url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"); background-size:cover; height: 380px; left: 0; position: absolute; background-position:0; margin-bottom: 20px;}
+        .post-title-block{padding:100px 0;}
+        .post-title-block h1 {color: #fff; font-size: 85px; font-weight: bold; text-transform: capitalize;}
+        .post-title-block li{font-size:20px; color: #fff;}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="banner-section" >
+    </section>
+
+    <section class="post-content-section bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 post-title-block">
+                    <h1 class="text-center">{{ data.title }}</h1>
+                <ul class="list-inline text-center">
+                    <li>{{ data.author }}</li>
+                    <li>{{ date_posted  }}</li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12">
+                <br>
+                <br>
+                {{ data.content|safe }}
+            </div>
+        </div>
+        <br>
+        <br>
+        <p>Upvoted: {{ data.votes }} time(s)</p>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="{{ url_for('upvote', post_id=data.id ) }}">UpVote</a>
+        <br>
+        <br>
+    </section>
+    <br>
+    <br>
+    <br>
+    {% endblock %}

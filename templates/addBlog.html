@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Add Blog{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <br>
+        <br>
+        <h1>Add Blog</h1>
+        <br>
+        <br>
+        <form action="{{ url_for('publish') }}" method="POST" name="publish" id="publish">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="" name="title">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Author Name</label>
+                <input type="text" class="form-control" id="author" placeholder="" name="author">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Blog Content</label>
+                <textarea class="form-control" id="content" rows="7" name="content" placeholder="You can add HTML tags here for rich text formatting"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Publish Blog</button>
+        </form> 
+    </div>
+    
+    
+{% endblock %}
