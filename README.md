@@ -1,6 +1,6 @@
 # Flask Blog
 
-Simple Blog created with flask, with upvote funtionality
+Simple Blog created with flask, with upvote functionality
 
 ## Commands to run
 1. Comand to install all required packages
