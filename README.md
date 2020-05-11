@@ -15,4 +15,8 @@ pipenv shell
  ```
  pipenv run python app.py
  ```
- 
+ ### Requirements
+ 1. Python3, duh!
+ 2. Flask
+ 3. SQLAlchemy
+ 4. SQLite3
