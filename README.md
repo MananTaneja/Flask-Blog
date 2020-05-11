@@ -13,6 +13,6 @@ pipenv shell
  ```
  3. Run the website on localhost
  ```
- pipenv run python ap.py
+ pipenv run python app.py
  ```
  
