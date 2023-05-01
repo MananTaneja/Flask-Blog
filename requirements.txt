@@ -1,7 +1,7 @@
 -i https://pypi.org/simple/
 click==7.1.2
 flask-sqlalchemy==2.4.1
-flask==1.1.2
+flask==2.3.2
 greenlet==1.0.0 ; python_version >= '3'
 itsdangerous==1.1.0
 jinja2==2.11.3
